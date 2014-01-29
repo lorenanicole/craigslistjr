@@ -1,6 +1,7 @@
-
-<h1>Grats bucko! you created a post!</h1>
-<p>here is your super secret url! Dont lose it!!!</p>
-<p><% @key %><%= @key %>
-<%= @new_post.id %></p>
-<a href="/<%= @new_post.id %>/edit?=<%= @new_post.key %>">Secret URL</a>
+<div class="container">
+    <h1>Grats bucko! you created a post!</h1>
+    <p>here is your super secret url! Dont lose it!!!</p>
+    <p><% @key %><%= @key %>
+    <%= @new_post.id %></p>
+    <a href="/post/<%= @new_post.id %>/edit?key=<%= @new_post.key %>">Super Secret URL</a>
+</div>

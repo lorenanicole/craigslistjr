@@ -1,7 +1,7 @@
 require 'pry'
 
 get '/' do
-  @date = Time.now
+  @date = Time.now.asctime
   @categories = Category.all
   erb :index
 end
@@ -11,7 +11,6 @@ get '/create' do
 end
 
 get '/category/:name' do
-  # binding.pry
   @post = Post.find_these(params[:name])
   erb :list_posts
 end
@@ -33,8 +32,14 @@ post '/create_post' do
   erb :created_page
 end
 
-get '/post/:id/edit?=:key' do
-  binding.pry
-  @update_post = Post.find_by_key(params[:key])
+
+get '/post/:id/edit' do
+  @key = params[:key]
+  @update_post = Post.find_by_key(@key)
   erb :edit_post
+end
+
+post '/update_post:id' do
+  Post.update_post(params)
+  redirect('/')
 end

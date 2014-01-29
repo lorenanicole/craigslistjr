@@ -1,1 +1,29 @@
-<h1>EDIT ME</h1>
+<div class="container">
+<h1>Update Post <%= @update_post.title %></h1>
+
+
+<form action='/update_post<%= @update_post.id %>' method='post'>
+  Title: <input value="<%= @update_post.title %> "  name="title"><br><br>
+  Description: <input value= "<%= @update_post.description %> " name="description"><br><br>
+  Price: <input value= "<%= @update_post.price %> " name="price"><br><br>
+  Email: <input value= "<%= @update_post.email %> " name="email"><br><br>
+  Category:
+  <select name="cat_id">
+    <option value="1">Clothing</option>
+    <option value="2">Home</option>
+    <option value="3">Computers</option>
+    <option value="4">Sports</option>
+    <option value="5">Toys</option>
+    <option value="6">Babies</option>
+    <option value="7">Tools</option>
+    <option value="8">Grocery</option>
+    <option value="9">Auto</option>
+    <option value="10">Movies</option>
+  </select><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br><br>
+
+<div id="banner"><img src="http://media.tumblr.com/1bc4c5a490be20b4e1ae54e324ede1b6/tumblr_inline_mn1wg5mKoa1qz4rgp.gif" alt="Banner" /></div>
+</div>

@@ -2,8 +2,27 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 3px dotted #663399;
 }
 th {
   text-align: left;
+}
+
+html {
+  font-family: 'Cutive', serif;
+  color: #009966;
+}
+
+h1, h2 {
+  color: #FFCC00;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color:#663399;
+  cursor: pointer;
 }

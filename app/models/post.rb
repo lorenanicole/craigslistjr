@@ -15,5 +15,14 @@ class Post < ActiveRecord::Base
   def self.create_key
     (0...8).map { (65 + rand(26)).chr }.join
   end
+
+  def self.update_post(params)
+    post = Post.find(params[:id].to_i)
+    post.update_attributes(title: params[:title],
+                           description: params[:description],
+                           price: params[:price],
+                           email: params[:email],
+                           category_id: params[:cat_id])
+  end
   # Remember to create a migration!
 end
