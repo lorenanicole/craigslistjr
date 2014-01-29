@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><center>Categories:</center></h1>
+  <p>You are on the categories page!</p>
+  <p>The date is: <%= @date %></p>
+<ul>
+  <%@categories.each do |c| %>
+  <li><a href="/category/<%=c.id%>"><%=c.name%></a></li>
+  <%end%>
+</ul>
+<a href="/create">Click me to create a post!!</a>
+</div>

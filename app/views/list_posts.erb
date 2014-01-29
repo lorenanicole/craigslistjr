@@ -1,0 +1,13 @@
+<div class="container">
+
+  <ul>
+    <%@post.each do |p| %>
+    <li><a href="/post/<%=p.id%>"><%=p.title%></a></li>
+    <%end%>
+  </ul>
+
+  <a href='/'>home</p>
+
+</div>
+
+
